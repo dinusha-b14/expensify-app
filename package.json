@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
-    "dev-server": "webpack-dev-server",
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "test": "jest --config=jest.config.json"
   },
   "dependencies": {
@@ -41,5 +42,10 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }
