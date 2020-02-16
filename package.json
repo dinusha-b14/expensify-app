@@ -9,7 +9,9 @@
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "@babel/core": "^7.6.4",
@@ -21,6 +23,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
+    "express": "^4.17.1",
     "jest": "^24.9.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
@@ -41,9 +44,7 @@
     "validator": "^11.1.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.9.0"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^3.9.0",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
     "webpack-merge": "^4.2.2"
